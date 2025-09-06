@@ -1,0 +1,28 @@
+body{
+    height: 100vh;
+    justify-items: center; display: grid;
+    align-content: center; place-items: center;
+    background-color: lightgreen;
+    font-size: bold;
+}
+
+header{
+    background-color: white;
+    width: 150vh;
+    font-style: bold;
+    font-size: large;
+    text-align: center;
+    border: 1px solid green;
+}
+main{
+    background-color: white;
+    width: 150vh;
+    font-size: small;
+    border: 1px solid green;
+    text-align: center;
+}
+
+footer {
+    font-size:small;
+    text-align: center;
+}
