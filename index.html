@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO List</title>
+
+    <!--CSS External-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Tailwind CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body>
+
+    <!--Header-->
+    <header class="rounded-lg">
+        <h1 class="font-bold">My To-Do List</h1>
+    </header>
+    <!--Main-->
+    <main class="rounded-lg">
+        <section id="todo-input-section" class="py-[16px]">
+            <form>
+                <input type="text" class="border rounded py-1 px-2 border-green-500 bg-green-200" id="todo-input"  placeholder="Enter a new task...">
+                <input type="date" class="border rounded py-1 px-2 border-green-500 bg-green-200" id="date-input">
+                <button type="button" class="bg-green-500 text-white font-bold py-1 px-2 rounded" id="add-todo-button" onclick="validateInput();" >Add Task</button>    
+            </form>    
+        </section>
+
+        <section class="flex justify-between">
+            <br>   
+            <!-- Filter Dropdown -->
+            <div class="bg-gray-500 font-bold py-1 px-2 rounded">
+                <select id="statusFilter" class=" bg-gray-500 rounded-lg px-2 py-1" onchange="filterTodo()">
+                    <option value="all">All</option>
+                    <option value="active">To-Do</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <br>
+            <button class="bg-pink-500 text-white font-bold py-1 px-2 rounded" onclick="deleteAllTasks();">
+                Delete All Tasks
+            </button>
+            <br>
+           </section>
+           <!--- Todo List Section--->
+            <section class="py-[16px]">
+                <h2 class="text-small text-left font-bold px-4"> List of To-Do :</h2>
+                <ul id="todo-list" class="text-center text-small py-1 px-16px">
+                    <p>No tasks added yet.</p>
+                    <!-- Todo items will be dynamically added here -->
+                </ul>
+            </section>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="font-bold py-4">
+        <p>&copy; 2025 Diva's To-Do List</p>
+    </footer>
+
+    <!---Javascript External-->
+    <script src="js/script.js"></script>
+</body>
+</html>
